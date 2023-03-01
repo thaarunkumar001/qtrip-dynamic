@@ -33,8 +33,25 @@ function addAdventureToDOM(adventures) {
     let colDiv = document.createElement("div");
     colDiv.className = "col-6 col-md-4 col-lg-3 mb-5";
     colDiv.innerHTML = `
-    <a href = "./detail/?adventure=${key.id}" id = ${key.id}>    <div class = "position-relative">    <div class = "category-banner">    ${key.category}
-    </div>      <div class = "card activity-card mx-3">      <img src = ${key.image} class="card-img-top" alt = ${key.image}>      <div class = "card-body col-md-12 mt-2">      <div class = "card-text d-flex justify-content-between">      <p>${key.name}</p>      <p>₹${key.costPerHead}</p>      </div>      <div class = "card-text d-flex justify-content-between">      <p>Duration</p>      <p>${key.duration} Hours</p>      </div>      </div>      </div>    </div>    </a>    `;
+    <a href = "./detail/?adventure=${key.id}" id = ${key.id}>   
+     <div class = "position-relative">    
+     <div class = "category-banner">    ${key.category}
+    </div>      
+    <div class = "card activity-card mx-3">     
+     <img src = ${key.image} class="card-img-top" alt = ${key.image}>      
+     <div class = "card-body col-md-12 mt-2">      
+     <div class = "card-text d-flex justify-content-between">     
+      <p>${key.name}</p>      
+      <p>₹${key.costPerHead}</p>     
+       </div>      
+       <div class = "card-text d-flex justify-content-between">      
+       <p>Duration</p>      
+       <p>${key.duration} Hours</p>     
+        </div>      
+        </div>      
+        </div>    
+        </div>   
+         </a>    `;
     rowDiv.append(colDiv);
   });
  
