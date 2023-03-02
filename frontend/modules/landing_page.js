@@ -3,6 +3,7 @@ import config from "../conf/index.js";
 async function init() {
   //Fetches list of all cities along with their images and description
 
+
   console.log("From Init()")
   console.log(config.backendEndpoint)
   let cities = await fetchCities();
@@ -13,6 +14,8 @@ async function init() {
   });
 
 
+ 
+
 }
 
 //Implementation of fetch call
@@ -20,12 +23,15 @@ async function fetchCities() {
   // TODO: MODULE_CITIES
   // 1. Fetch cities using the Backend API and return the data
 
+
   try{let response = await fetch(config.backendEndpoint+"/cities");
   let user = await response.json();
   return user;}
   catch(err){
     return null;
   }
+
+
 
 }
 
@@ -47,6 +53,8 @@ function addCityToDOM(id, city, description, image) {
     </div> 
      </a>  `;
   rowDiv.appendChild(colDiv);
+
+
 
 
 
